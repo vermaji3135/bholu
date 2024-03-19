@@ -12,14 +12,18 @@ const userRoute = require('./routes/userRoute')
 
 app.use('/api', userRoute)
 
-// app.listen(port, function () {
-//   console.log(`App running on port ${port}`);
-// })
-const server = app.listen(0, () => {
-  const port = server.address().port;
+app.listen(port, function () {
   console.log(`App running on port ${port}`);
-});
+})
+// const server = app.listen(0, () => {
+//   const port = server.address().port;
+//   console.log(`App running on port ${port}`);
+// });
 
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//   console.log(`Server is running on port ${port}`);
+// });
 // const express = require('express'); // Import Express
 
 // const app = express(); // Define the app instance
